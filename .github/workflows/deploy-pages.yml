@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'site/**'
+      - '_site/**'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +20,6 @@ jobs:
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: -_site
       - id: deployment
         uses: actions/deploy-pages@v4
